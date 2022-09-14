@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Biglietti</title>
+</head>
+<body>
+<div align="center">
+    <h1>Biglietti disponibili</h1>
+    <br/><br/>
+    <table border="1" cellpadding="10" table>
+        <thead>
+        <tr>
+            <th>BigliettoId</th>
+            <th>VenditoreId</th>
+            <th>Città</th>
+            <th>Luogo</th>
+            <th>Gruppo</th>
+            <th>Prezzo</th>
+            <th>N.Biglietti</th>
+            <th>Data Replica</th>
+            <th>Codice Replica</th>
+            <th>Pagamento</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="biglietto : ${listaBiglietti}">
+            <td th:text="${biglietto.bigliettoId}">BigliettoId</td>
+            <td th:text="${biglietto.venditoreId}">VenditoreId</td>
+            <td th:text="${biglietto.citta}">Città</td>
+            <td th:text="${biglietto.luogo}">Luogo</td>
+            <td th:text="${biglietto.gruppo}">Gruppo</td>
+            <td th:text="${biglietto.prezzo}">Prezzo</td>
+            <td th:text="${biglietto.quantitaB}">N.Biglietti</td>
+            <td th:text="${biglietto.replica}">Data Replica</td>
+            <td th:text="${biglietto.codiceReplica}">Codice Replica</td>
+            <td th:text="${biglietto.pagamento}">Pagamento</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

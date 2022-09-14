@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compra biglietti</title>
+</head>
+<body>
+<form action="#" method="post" th:action="@{/buy}"
+      th:object="${biglietto}">
+
+    <table border="0" cellpadding="10">
+        <tr>
+            <td>BigliettoID:</td>
+            <td>
+                <input readonly="readonly" th:field="*{id}" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Qta Biglietti</td>
+            <td>
+                <input th:field="*{quantitaB}" type="text"/>
+            </td>
+
+        <tr>
+            <td colspan="2">
+                <button type="submit">Buy</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
